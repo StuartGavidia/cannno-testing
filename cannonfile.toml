@@ -1,0 +1,15 @@
+name = "sample-foundry-project"
+version = "0.1"
+description = "Sample Foundry Project"
+
+[setting.number]
+defaultValue = "420"
+description="Initialization value for the number"
+
+[contract.counter]
+artifact = "Counter"
+
+[invoke.set_number]
+target = ["counter"]
+func = "setNumber"
+args = ["<%= settings.number %>"]
